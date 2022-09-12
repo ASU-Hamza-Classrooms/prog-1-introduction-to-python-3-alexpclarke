@@ -1,6 +1,6 @@
 #!/bin/python3
 
-#import the code in string1.py
+# import the code in string1.py
 
 from stringlib import *
 from worker import *
@@ -9,6 +9,13 @@ import sys
 #Function to test the functions in the stringlib module
 def testStringLib(inputStr):
     #Add code to call each of the functions and print the results
+    print("Input string is", inputStr)
+    print("Reverse of string is", reverseStr(inputStr))
+    print("Does string contain apple?", containsWord(inputStr, "apple"))
+    print("Does string contain banana?", containsWord(inputStr, "banana"))
+    print("Is string a palindrome?", isPalindrome(inputStr))
+    print("Uppercase of string is", upperCaseStr(inputStr))
+
     return
 
 #Function to test the methods in the Worker class in the worker module
@@ -16,6 +23,15 @@ def testWorkerClass(inputStr):
     #Add code to create a Worker object
     #Use the object to call each of the methods in the Worker class
     #Print the result of each call
+    w = Worker(inputStr)
+
+    print("Input string is", inputStr)
+    print("Reverse of string is", w.reverseStr())
+    print("Does string contain apple?", w.containsWord("apple"))
+    print("Does string contain banana?", w.containsWord("banana"))
+    print("Is string a palindrome?", w.isPalindrome())
+    print("Uppercase of string is", w.upperCaseStr())
+
     return
 
 #check to make sure there is a string command line argument
